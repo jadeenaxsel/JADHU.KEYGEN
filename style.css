@@ -120,6 +120,7 @@ h2 {
 
 input[type="text"] {
     flex-grow: 1;
+    width: 100%;
     background: #001100;
     border: 1px solid var(--border-color);
     color: var(--text-color);
@@ -274,4 +275,42 @@ footer {
     text-align: center;
     margin-top: 20px;
     color: var(--text-dim);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+        border-width: 1px;
+        margin: 10px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+        top: -12px;
+    }
+    .setting-row:not(.checkbox-row) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    input[type="range"] {
+        width: 100%;
+    }
+    .display-container, .analyze-container {
+        flex-direction: column;
+    }
+    input[type="text"] {
+        font-size: 1.2rem;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .primary-btn {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
 }
