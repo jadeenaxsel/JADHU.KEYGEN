@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Password Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="crt-overlay"></div>
+    <div class="container">
+        <header>
+            <h1>> JADHU.KEYGEN // v1.3</h1>
+            <p class="subtitle">
+                // Secure Password Generation & Analysis Engine<br>
+                // Built for strength. Designed for security.<br>
+                // No weak passwords allowed.
+            </p>
+        </header>
+
+        <main>
+            <section class="panel">
+                <h2>[ GENERATE ]</h2>
+                <div class="display-container">
+                    <input type="text" id="generated-password" class="glitch-text" readonly placeholder="AWAITING GENERATION...">
+                    <button id="copy-btn" class="btn">[COPY]</button>
+                </div>
+
+                <div class="settings">
+                    <div class="setting-row">
+                        <label for="length-slider">> LENGTH: <span id="length-val">12</span></label>
+                        <input type="range" id="length-slider" min="4" max="32" value="12">
+                    </div>
+
+                    <div class="setting-row checkbox-row">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase" class="checkbox-label">[X] UPPERCASE</label>
+                    </div>
+                    
+                    <div class="setting-row checkbox-row">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase" class="checkbox-label">[X] LOWERCASE</label>
+                    </div>
+                    
+                    <div class="setting-row checkbox-row">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers" class="checkbox-label">[X] NUMBERS</label>
+                    </div>
+                    
+                    <div class="setting-row checkbox-row">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols" class="checkbox-label">[X] SYMBOLS</label>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="btn primary-btn">> EXECUTE GENERATION_</button>
+            </section>
+
+            <section class="panel">
+                <h2>[ ANALYZE ]</h2>
+                <div class="analyze-container">
+                    <input type="text" id="analyze-input" placeholder="> INPUT PASSWORD TO ANALYZE...">
+                </div>
+                
+                <div class="strength-meter">
+                    <div class="strength-labels">
+                        <span>STRENGTH:</span>
+                        <span id="strength-text" class="blink">AWAITING INPUT...</span>
+                    </div>
+                    <div class="strength-bars">
+                        <div class="bar" id="bar-1"></div>
+                        <div class="bar" id="bar-2"></div>
+                        <div class="bar" id="bar-3"></div>
+                        <div class="bar" id="bar-4"></div>
+                    </div>
+                </div>
+                
+                <div class="feedback" id="feedback-text"></div>
+                <div class="crack-time" id="crack-time"></div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>> END OF LINE_</p>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">// DesignedAndImplementedBy deceiverjadhu</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
