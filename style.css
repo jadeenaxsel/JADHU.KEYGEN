@@ -118,6 +118,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+.analyze-container {
+    margin-top: 15px;
+}
+
 input[type="text"] {
     flex-grow: 1;
     width: 100%;
