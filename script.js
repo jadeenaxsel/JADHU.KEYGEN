@@ -21,8 +21,8 @@ const bars = [
 const feedbackText = document.getElementById('feedback-text');
 const crackTimeText = document.getElementById('crack-time');
 
-// Server URL
-const API_URL = 'http://localhost:3000/api';
+// Server URL (Dynamically route to the local network IP instead of hardcoding localhost)
+const API_URL = `http://${window.location.hostname || 'localhost'}:3000/api`;
 
 // Events
 lengthEl.addEventListener('input', (e) => {
