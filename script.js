@@ -1,1 +1,184 @@
-var _0x1a=document.getElementById('generated-password');var _0x1b=document.getElementById('length-slider');var _0x1c=document.getElementById('length-val');var _0x1d=document.getElementById('uppercase');var _0x1e=document.getElementById('lowercase');var _0x1f=document.getElementById('numbers');var _0x20=document.getElementById('symbols');var _0x21=document.getElementById('generate-btn');var _0x22=document.getElementById('copy-btn');var _0x23=document.getElementById('analyze-input');var _0x24=document.getElementById('strength-text');var _0x25=[document.getElementById('bar-1'),document.getElementById('bar-2'),document.getElementById('bar-3'),document.getElementById('bar-4')];var _0x26=document.getElementById('feedback-text');var _0x27=document.getElementById('crack-time');var _0x28='abcdefghijklmnopqrstuvwxyz';var _0x29='ABCDEFGHIJKLMNOPQRSTUVWXYZ';var _0x2a='0123456789';var _0x2b='!@#$%^&*()_+~`|}{[]:;?><,./-=';_0x1b.addEventListener('input',(_0x2c)=>{_0x1c.innerText=_0x2c.target.value;});_0x21.addEventListener('click',()=>{var _0x2d=+_0x1b.value;var _0x2e=_0x1e.checked;var _0x2f=_0x1d.checked;var _0x30=_0x1f.checked;var _0x31=_0x20.checked;_0x1a.value=_0x93(_0x2e,_0x2f,_0x30,_0x31,_0x2d);_0x1a.classList.remove('blink');if(_0x1a.value){_0x23.value=_0x1a.value;_0x94(_0x1a.value);}});_0x22.addEventListener('click',()=>{if(!_0x1a.value)return;navigator.clipboard.writeText(_0x1a.value);var _0x32=_0x22.innerText;_0x22.innerText='[COPIED!]';_0x22.style.color='var(--bg-color)';_0x22.style.background='var(--text-color)';setTimeout(()=>{_0x22.innerText=_0x32;_0x22.style.color='var(--text-color)';_0x22.style.background='transparent';},2000);});_0x23.addEventListener('input',(_0x2c)=>{_0x94(_0x2c.target.value);});function _0x93(_0x33,_0x34,_0x35,_0x36,_0x37){var _0x38='';var _0x39=_0x33+_0x34+_0x35+_0x36;var _0x3a=[{_0x33},{_0x34},{_0x35},{_0x36}].filter(_0x3b=>Object.values(_0x3b)[0]);if(_0x39===0)return '';for(let _0x3c=0;_0x3c<_0x37;_0x3c+=_0x39){_0x3a.forEach(_0x3d=>{var _0x3e=Object.keys(_0x3d)[0];_0x38+=_0x3f[_0x3e]();});}return _0x38.slice(0,_0x37).split('').sort(()=>0.5-Math.random()).join('');}var _0x3f={_0x33:()=>_0x28[Math.floor(Math.random()*_0x28.length)],_0x34:()=>_0x29[Math.floor(Math.random()*_0x29.length)],_0x35:()=>_0x2a[Math.floor(Math.random()*_0x2a.length)],_0x36:()=>_0x2b[Math.floor(Math.random()*_0x2b.length)]};function _0x94(_0x40){if(!_0x40){_0x95();return;}var _0x41=0;var _0x42=[];if(_0x40.length>7)_0x41+=1;else _0x42.push("TOO SHORT (MIN 8 CHARS)");if(_0x40.length>11)_0x41+=1;var _0x43=/[a-z]/.test(_0x40);var _0x44=/[A-Z]/.test(_0x40);var _0x45=/\d/.test(_0x40);var _0x46=/[^A-Za-z0-9]/.test(_0x40);if(_0x43&&_0x44)_0x41+=1;else _0x42.push("MIX UPPER & LOWERCASE");if(_0x45||_0x46)_0x41+=1;else _0x42.push("ADD NUMBERS OR SYMBOLS");if(_0x43&&_0x44&&_0x45&&_0x46&&_0x40.length>11)_0x41=4;if(_0x40.length<5)_0x41=1;_0x96(_0x41,_0x42);_0x97(_0x40,_0x43,_0x44,_0x45,_0x46);}function _0x97(_0x40,_0x43,_0x44,_0x45,_0x46){if(!_0x40){_0x27.innerText='';return;}var _0x47=0;if(_0x43)_0x47+=26;if(_0x44)_0x47+=26;if(_0x45)_0x47+=10;if(_0x46)_0x47+=32;if(_0x47===0)_0x47=26;var _0x48=Math.pow(_0x47,_0x40.length);var _0x49=100e9;var _0x50=_0x48/_0x49;_0x27.innerText=`> THIS PASSWORD WOULD TAKE ${_0x98(_0x50)} TO CRACK`;_0x27.style.color=_0x99(_0x50);}function _0x98(_0x50){if(_0x50<1)return "LESS THAN A SECOND";if(_0x50<60)return `${Math.round(_0x50)} SECONDS`;var _0x51=_0x50/60;if(_0x51<60)return `${Math.round(_0x51)} MINUTES`;var _0x52=_0x51/60;if(_0x52<24)return `${Math.round(_0x52)} HOURS`;var _0x53=_0x52/24;if(_0x53<30)return `${Math.round(_0x53)} DAYS`;var _0x54=_0x53/30;if(_0x54<12)return `${Math.round(_0x54)} MONTHS`;var _0x55=_0x54/12;if(_0x55<100)return `${Math.round(_0x55)} YEARS`;if(_0x55<1000)return `${Math.round(_0x55/100)*100} YEARS`;if(_0x55<1000000)return `${Math.round(_0x55/1000)} THOUSAND YEARS`;if(_0x55<1000000000)return `${Math.round(_0x55/1000000)} MILLION YEARS`;return "BILLIONS OF YEARS";}function _0x99(_0x50){if(_0x50<3600)return "var(--danger)";if(_0x50<31536000)return "var(--warning)";return "var(--good)";}function _0x95(){_0x24.innerText="AWAITING INPUT...";_0x24.className="blink";_0x24.style.color="var(--text-color)";_0x26.innerText="";_0x27.innerText="";_0x25.forEach(_0x56=>{_0x56.style.backgroundColor="transparent";_0x56.style.boxShadow="none";_0x56.style.borderColor="var(--text-dim)";});}function _0x96(_0x57,_0x42){_0x95();_0x24.className="";var _0x58=["WEAK","FAIR","GOOD","SECURE"];var _0x59=["var(--danger)","var(--warning)","var(--good)","#00ffff"];var _0x5a=["#ff003c","#ffb000","#00ff41","#00ffff"];var _0x5b=Math.max(1,Math.min(4,_0x57));_0x24.innerText=`[ ${_0x58[_0x5b-1]} ]`;_0x24.style.color=_0x59[_0x5b-1];_0x24.style.textShadow=`0 0 10px ${_0x5a[_0x5b-1]}`;for(let _0x5c=0;_0x5c<_0x5b;_0x5c++){_0x25[_0x5c].style.backgroundColor=_0x59[_0x5b-1];_0x25[_0x5c].style.borderColor=_0x59[_0x5b-1];_0x25[_0x5c].style.boxShadow=`0 0 10px ${_0x5a[_0x5b-1]}`;}if(_0x5b===4){_0x26.innerText="> SYSTEM SECURE. ENCRYPTION OPTIMAL.";_0x26.style.color=_0x59[_0x5b-1];}else{_0x26.innerText=`> RECOMMENDATION: ${_0x42.join(' | ')}`;_0x26.style.color="var(--text-dim)";}}
+// DOM Elements
+const resultEl = document.getElementById('generated-password');
+const lengthEl = document.getElementById('length-slider');
+const lengthValEl = document.getElementById('length-val');
+const uppercaseEl = document.getElementById('uppercase');
+const lowercaseEl = document.getElementById('lowercase');
+const numbersEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateBtn = document.getElementById('generate-btn');
+const copyBtn = document.getElementById('copy-btn');
+
+// Analyze Elements
+const analyzeInput = document.getElementById('analyze-input');
+const strengthText = document.getElementById('strength-text');
+const bars = [
+    document.getElementById('bar-1'),
+    document.getElementById('bar-2'),
+    document.getElementById('bar-3'),
+    document.getElementById('bar-4')
+];
+const feedbackText = document.getElementById('feedback-text');
+const crackTimeText = document.getElementById('crack-time');
+
+// Server URL
+const API_URL = 'http://localhost:3000/api';
+
+// Events
+lengthEl.addEventListener('input', (e) => {
+    lengthValEl.innerText = e.target.value;
+});
+
+generateBtn.addEventListener('click', async () => {
+    const length = +lengthEl.value;
+    const lower = lowercaseEl.checked;
+    const upper = uppercaseEl.checked;
+    const number = numbersEl.checked;
+    const symbol = symbolsEl.checked;
+    
+    // UI Update during fetch
+    resultEl.value = "CONNECTING...";
+    
+    try {
+        const response = await fetch(`${API_URL}/generate`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ length, lower, upper, number, symbol })
+        });
+        const data = await response.json();
+        
+        resultEl.value = data.password || "";
+        resultEl.classList.remove('blink');
+        
+        if (resultEl.value) {
+            analyzeInput.value = resultEl.value;
+            checkServerStrength(resultEl.value);
+        }
+    } catch (error) {
+        console.error("Backend connection failed", error);
+        resultEl.value = "ERROR: BACKEND OFFLINE";
+    }
+});
+
+copyBtn.addEventListener('click', () => {
+    if(!resultEl.value || resultEl.value === "ERROR: BACKEND OFFLINE" || resultEl.value === "CONNECTING...") return;
+    navigator.clipboard.writeText(resultEl.value);
+    
+    const originalText = copyBtn.innerText;
+    copyBtn.innerText = '[COPIED!]';
+    copyBtn.style.color = 'var(--bg-color)';
+    copyBtn.style.background = 'var(--text-color)';
+    
+    setTimeout(() => {
+        copyBtn.innerText = originalText;
+        copyBtn.style.color = 'var(--text-color)';
+        copyBtn.style.background = 'transparent';
+    }, 2000);
+});
+
+analyzeInput.addEventListener('input', (e) => {
+    checkServerStrength(e.target.value);
+});
+
+async function checkServerStrength(password) {
+    if (!password) {
+        resetMeter();
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API_URL}/analyze`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password })
+        });
+        const data = await response.json();
+        
+        updateMeter(data.strength, data.feedback);
+        updateCrackTime(data.seconds);
+        
+    } catch(err) {
+         console.error("Backend offline", err);
+         updateMeter(0, ["BACKEND CONNECTION ERROR"]);
+    }
+}
+
+function resetMeter() {
+    strengthText.innerText = "AWAITING INPUT...";
+    strengthText.className = "blink";
+    strengthText.style.color = "var(--text-color)";
+    feedbackText.innerText = "";
+    crackTimeText.innerText = "";
+    
+    bars.forEach(bar => {
+        bar.style.backgroundColor = "transparent";
+        bar.style.boxShadow = "none";
+        bar.style.borderColor = "var(--text-dim)";
+    });
+}
+
+function updateMeter(score, feedback) {
+    resetMeter();
+    strengthText.className = ""; // Remove blink
+    
+    const strengthLevels = ["WEAK", "FAIR", "GOOD", "SECURE"];
+    const colors = ["var(--danger)", "var(--warning)", "var(--good)", "#00ffff"];
+    const shadowColors = ["#ff003c", "#ffb000", "#00ff41", "#00ffff"];
+    
+    let actualScore = Math.max(1, Math.min(4, score || 1));
+    
+    strengthText.innerText = `[ ${strengthLevels[actualScore - 1]} ]`;
+    strengthText.style.color = colors[actualScore - 1];
+    strengthText.style.textShadow = `0 0 10px ${shadowColors[actualScore - 1]}`;
+
+    for (let i = 0; i < actualScore; i++) {
+        bars[i].style.backgroundColor = colors[actualScore - 1];
+        bars[i].style.borderColor = colors[actualScore - 1];
+        bars[i].style.boxShadow = `0 0 10px ${shadowColors[actualScore - 1]}`;
+    }
+
+    if (actualScore === 4) {
+        feedbackText.innerText = "> SYSTEM SECURE. ENCRYPTION OPTIMAL.";
+        feedbackText.style.color = colors[actualScore - 1];
+    } else {
+        feedbackText.innerText = `> RECOMMENDATION: ${feedback ? feedback.join(' | ') : ''}`;
+        feedbackText.style.color = "var(--text-dim)";
+    }
+}
+
+function updateCrackTime(seconds) {
+    if (seconds === undefined) return;
+    crackTimeText.innerText = `> THIS PASSWORD WOULD TAKE ${formatTime(seconds)} TO CRACK`;
+    crackTimeText.style.color = getCrackTimeColor(seconds);
+}
+
+function formatTime(seconds) {
+    if (seconds < 1) return "LESS THAN A SECOND";
+    if (seconds < 60) return `${Math.round(seconds)} SECONDS`;
+    
+    const minutes = seconds / 60;
+    if (minutes < 60) return `${Math.round(minutes)} MINUTES`;
+    
+    const hours = minutes / 60;
+    if (hours < 24) return `${Math.round(hours)} HOURS`;
+    
+    const days = hours / 24;
+    if (days < 30) return `${Math.round(days)} DAYS`;
+    
+    const months = days / 30;
+    if (months < 12) return `${Math.round(months)} MONTHS`;
+    
+    const years = months / 12;
+    if (years < 100) return `${Math.round(years)} YEARS`;
+    if (years < 1000) return `${Math.round(years / 100) * 100} YEARS`;
+    if (years < 1000000) return `${Math.round(years / 1000)} THOUSAND YEARS`;
+    if (years < 1000000000) return `${Math.round(years / 1000000)} MILLION YEARS`;
+    
+    return "BILLIONS OF YEARS";
+}
+
+function getCrackTimeColor(seconds) {
+    if (seconds < 3600) return "var(--danger)"; // < 1 hour
+    if (seconds < 31536000) return "var(--warning)"; // < 1 year
+    return "var(--good)"; // > 1 year
+}

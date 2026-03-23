@@ -23,10 +23,6 @@
         <main>
             <section class="panel">
                 <h2>[ GENERATE ]</h2>
-                <div class="display-container">
-                    <input type="text" id="generated-password" class="glitch-text" readonly placeholder="AWAITING GENERATION...">
-                    <button id="copy-btn" class="btn">[COPY]</button>
-                </div>
 
                 <div class="settings">
                     <div class="setting-row">
@@ -36,26 +32,31 @@
 
                     <div class="setting-row checkbox-row">
                         <input type="checkbox" id="uppercase" checked>
-                        <label for="uppercase" class="checkbox-label">[X] UPPERCASE</label>
+                        <label for="uppercase" class="checkbox-label">UPPERCASE</label>
                     </div>
                     
                     <div class="setting-row checkbox-row">
                         <input type="checkbox" id="lowercase" checked>
-                        <label for="lowercase" class="checkbox-label">[X] LOWERCASE</label>
+                        <label for="lowercase" class="checkbox-label">LOWERCASE</label>
                     </div>
                     
                     <div class="setting-row checkbox-row">
                         <input type="checkbox" id="numbers" checked>
-                        <label for="numbers" class="checkbox-label">[X] NUMBERS</label>
+                        <label for="numbers" class="checkbox-label">NUMBERS</label>
                     </div>
                     
                     <div class="setting-row checkbox-row">
                         <input type="checkbox" id="symbols" checked>
-                        <label for="symbols" class="checkbox-label">[X] SYMBOLS</label>
+                        <label for="symbols" class="checkbox-label">SYMBOLS</label>
                     </div>
                 </div>
 
-                <button id="generate-btn" class="btn primary-btn">> EXECUTE GENERATION_</button>
+                <button id="generate-btn" class="btn primary-btn" style="margin-bottom: 20px;">> EXECUTE GENERATION_</button>
+
+                <div class="display-container">
+                    <input type="text" id="generated-password" class="glitch-text" readonly placeholder="AWAITING GENERATION...">
+                    <button id="copy-btn" class="btn">[COPY]</button>
+                </div>
             </section>
 
             <section class="panel">
