@@ -283,38 +283,98 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
     .container {
-        padding: 20px 15px;
+        padding: 15px 10px;
         border-width: 1px;
-        margin: 10px;
+        margin: 0;
+    }
+    header {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
     }
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+    .subtitle {
+        font-size: 0.85rem;
+        line-height: 1.2;
+        margin-top: 2px;
+    }
+    .panel {
+        margin-bottom: 15px;
+        padding: 15px 10px;
     }
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         top: -12px;
     }
+    .settings {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    .setting-row {
+        margin-bottom: 0;
+    }
     .setting-row:not(.checkbox-row) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        grid-column: span 2;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 5px;
     }
     input[type="range"] {
-        width: 100%;
+        flex-grow: 1;
+        width: auto;
+    }
+    .checkbox-label {
+        font-size: 0.95rem;
+    }
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
     }
     .display-container, .analyze-container {
-        flex-direction: column;
+        flex-direction: row;
+        margin-bottom: 10px;
+        gap: 5px;
+    }
+    .analyze-container {
+        margin-top: 10px;
     }
     input[type="text"] {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        padding: 6px 10px;
     }
     .btn {
-        width: 100%;
-        margin-top: 5px;
+        width: auto;
+        margin-top: 0;
+        padding: 6px 10px;
+        font-size: 1rem;
     }
     .primary-btn {
-        font-size: 1.3rem;
-        padding: 12px;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 10px !important;
+        width: 100%;
+    }
+    .strength-meter {
+        margin-top: 5px;
+    }
+    .feedback, .crack-time {
+        margin-top: 5px;
+        font-size: 0.95rem;
+        line-height: 1.2;
+    }
+    footer {
+        margin-top: 10px;
+    }
+    footer p {
+        margin-top: 0px !important;
+        margin-bottom: 5px;
     }
 }
