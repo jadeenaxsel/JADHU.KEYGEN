@@ -21,8 +21,8 @@ const bars = [
 const feedbackText = document.getElementById('feedback-text');
 const crackTimeText = document.getElementById('crack-time');
 
-// Server URL (Dynamically route to the local network IP instead of hardcoding localhost)
-const API_URL = `http://${window.location.hostname || 'localhost'}:3000/api`;
+// Vercel Serverless URL
+var API_URL = '/api';
 
 // Events
 lengthEl.addEventListener('input', (e) => {
